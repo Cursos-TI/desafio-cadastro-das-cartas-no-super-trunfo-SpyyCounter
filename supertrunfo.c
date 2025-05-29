@@ -82,11 +82,11 @@ int main () {
   
   printf("Digite o codigo da carta: \n");
   scanf("%s" , codcarta2);
-  getchar();
+  limparBuffer();
 
   printf("Digite o estado (1 caractere): \n");
   scanf (" %c" , &estado2);
-  getchar();
+  limparBuffer();
   
   printf("Digite o nome da cidade: \n");
   fgets (cidade2, 50, stdin);
@@ -140,24 +140,55 @@ int main () {
     printf("Super Poder: %.2f\n", superpoder2);
 
 printf("\n---Comparação das Cartas---\n");
-    printf("População: Carta %d venceu (%d)\n", 1 + (populacao < populacao2), (populacao > populacao2) * 1);
-    printf("Área: Carta %d venceu (%d)\n", 1 + (areakm < areakm2), (areakm > areakm2) * 1);
-    printf("PIB: Carta %d venceu (%d)\n", 1 + (pib < pib2), (pib > pib2) * 1);
-    printf("Pontos Turísticos: Carta %d venceu (%d)\n", 1 + (pontoturist < pontoturist2), (pontoturist > pontoturist2) * 1);
-    printf("Densidade Populacional: Carta %d venceu (%d)\n", 1 + (densidadepopu > densidadepopu2), (densidadepopu < densidadepopu2) * 1); 
-    printf("PIB per Capita: Carta %d venceu (%d)\n", 1 + (pibpercapita1 < pibpercapita2), (pibpercapita1 > pibpercapita2) * 1);
-    printf("Super Poder: Carta %d venceu (%d)\n", 1 + (superpoder < superpoder2), (superpoder > superpoder2) * 1);
+   
+//comparação de população 
+if (populacao > populacao2){
+    printf("População:Carta 1 venceu!\n");
+} else {
+     printf("População:Carta 2 venceu!\n");
+}
 
+//comparação de areakm2
+if (areakm > areakm2){
+    printf("Área:Carta 1 venceu!\n");
+} else {
+     printf("Área:Carta 2 venceu!\n");
+}
 
+//comparação de pib
+if (pib > pib2){
+    printf("PIB:Carta 1 venceu!\n");
+} else {
+     printf("PIB:Carta 2 venceu!\n");
+}
 
+//comparação de pontos turisticos 
+if (pontoturist > pontoturist2){
+    printf("Pontos Turísticos:Carta 1 venceu!\n");
+} else {
+     printf("Pontos Turísticos:Carta 2 venceu!\n");
+}
 
+//comparação de desnsidade
+if (densidadepopu < densidadepopu2){
+    printf("Densidade Populacional:Carta 1 venceu!\n");
+} else {
+     printf("Densidade Populacional:Carta 2 venceu!\n");
+}
 
+//comparação de pib per capita
+if (pibpercapita1 > pibpercapita2){
+    printf("PIB per capita:Carta 1 venceu!\n");
+} else {
+     printf("PIB per capita:Carta 2 venceu!\n");
+}
 
+//comparação de super poder
+if (superpoder > superpoder2){
+    printf("Super Poder:Carta 1 venceu!\n");
+} else {
+     printf("Super Poder:Carta 2 venceu!\n");
+}
 return 0;
 
 };
-
-
-
-
-
